@@ -1,0 +1,19 @@
+{
+	"name": "25th/apigility-serializing-hydrator",
+	"authors": [
+		{
+			"name": "Martin Prebio",
+			"email": "mp@25th-floor.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4",
+
+		"25th/serializing": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"TwentyFifth\\Hydrator\\": "src/"
+		}
+	}
+}
