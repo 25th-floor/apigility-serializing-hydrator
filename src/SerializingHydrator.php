@@ -9,6 +9,9 @@ use Zend\Stdlib\Hydrator\HydratorInterface;
 class SerializingHydrator
 	implements HydratorInterface
 {
+    /** @var int  */
+    public static $steps = 5;
+
 	/**
 	 * Extract values from an object
 	 *
@@ -17,7 +20,7 @@ class SerializingHydrator
 	 */
 	public function extract($object)
 	{
-		return Serializer::serialize($object, 5);
+		return Serializer::serialize($object, self::$steps);
 	}
 
 	/**
@@ -32,4 +35,5 @@ class SerializingHydrator
 	{
 		throw new SerializingException(__CLASS__.' does not support hydration');
 	}
-} 
+
+}
